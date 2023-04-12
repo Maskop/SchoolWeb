@@ -1,0 +1,141 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<body>
+    <section>
+        <div class="header">
+            <input type="checkbox" id="login" class="open" name="open">
+            <div class="head">
+                <div class="logo">
+                    <img src="~/photo/.png" alt="">
+                </div>
+                <div class="odkazy">
+                    <a href="#info">NOVINKY</a>
+                    <a asp-controller="Home" asp-action="Content">Příspěvky</a>
+                    <a href="#app">Aplikace</a>
+                    <label for="login">Přihlásit se</label>
+                    <a href="index.html">Odhlásit se</a>
+                </div>
+                <div class="input">
+                    <div class="login input-flex">
+                        <a href="account.html"><img src="~/photo/profil.webp" alt=""></a>
+                    </div>
+                    <div class="create input-flex">
+                        <a href="post.html"><img src="~/photo/create.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="name">
+                <img src="~/photo/backgr-logo.png" alt="">
+                <img src="~/photo/GP-white.png" alt="" class="gp-img">
+                <div class="log open">
+                    <p>PROFIL</p>
+                    <div class="prihlasit">
+                        Přihlášení
+                        <input type="text" name="" id="" placeholder="Jméno">
+                        <input type="password" name="" id="" placeholder="Heslo">
+                        <input type="submit" value="Přihlásit se">
+                    </div>
+                    <a href="registrace.html">Registrace</a>
+                </div>
+            </div>
+        </div>
+        <div class="info" id="info">
+            <input type="radio" name="slide" id="one">
+            <input type="radio" name="slide" id="two">
+            <input type="radio" name="slide" id="">
+            <input type="radio" name="slide" id="">
+            <input type="radio" name="slide" id="">
+            <hr class="info">
+            <h1>NOVINKY</h1>
+            <div class="slider">
+                <div class="slideplace">
+                    <div class="first-slide"></div>
+                    <div class="slide">
+                        <div class="slide-text">
+                            <h2>TERMÍN - Halloween</h2>
+                            <li>31.11.2022</li>
+                            <li>s sebou kostýmy</li>
+                            <li>2.přestávka - focení</li>
+                        </div>
+                        <div class="slide-image">
+                            <img src="~/photo/halloween.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                            <h2>TERMÍN - Halloween</h2>
+                            <li>31.11.2022</li>
+                            <li>s sebou kostýmy</li>
+                            <li>2.přestávka - focení</li>
+                        </div>
+                        <div class="slide-image">
+                            <img src="~/photo/halloween.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                            <h2>TERMÍN - Halloween</h2>
+                            <li>31.11.2022</li>
+                            <li>s sebou kostýmy</li>
+                            <li>2.přestávka - focení</li>
+                        </div>
+                        <div class="slide-image">
+                            <img src="~/photo/halloween.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="onclick-arrows">
+                <label  for="one"  class="arrow-left"></label>
+                <label for="two" class="arrow-right"></label>
+            </div>
+        </div>
+        <div class="post-inst">
+
+        </div>
+        <div class="app" id="app">
+            <div class="app-text">
+                <hr class="download">
+                <h2>APP</h2>
+                <li>Aplikace pro mobily!</li>
+                <li>Propojení s webovými stránkami.</li>
+                <li>Pro ANDROID a iOS.</li>
+                <li>Stažení zdarma!!!</li>
+                <div class="app-download">
+                    <a href="photo/mobile.pdf" download="ANdroid"><div>ANDROID</div></a>
+                    <a href="photo/mobile.pdf" download=""><div>iOS</div></a>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="~/photo/mobile.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-cont">
+            <div class="footer-inf">
+                <div class="foot-content">
+                    <hr class="footer">
+                    <h2>KONTAKT</h2>
+                    <li>Gymnázium, Praha 4, Písnická 760</li>
+                    <li>Telefon: <a href="tel:+">(+420) 241 712 754</a></li>
+                    <li>E-mail: <a href="mailto:">info@gpisnicka.cz</a></li>
+                    <li>Oficiální <a href="https://www.gpisnicka.cz/" target="_blank">webové stránky</a> školy</li>
+                </div>
+            </div>
+            <div class="partners">
+                <img src="~/photo/GP-white.png" alt="">
+                <div class="partners-a">
+                    <a href="https://www.instagram.com/gpisnicka760/" target="_blank"><img src="~/photo/I_icon.png" alt=""> Instagram</a>
+                    <a href="https://www.facebook.com/Gymn%C3%A1zium-Praha-4-P%C3%ADsnick%C3%A1-760-212247958921052/" target="_blank"><img src="photo/F_icon.png" alt=""> Facebook</a>
+                    <a href="" target="_blank"><img src="~/photo/Tw_icon.png" alt=""> Twitter</a>
+                </div>
+            </div>
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.590410502544!2d14.439741929338627!3d50.019031791336076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b915a448b028d%3A0xce3bcf0879ad1f99!2zR3ltbsOheml1bSwgUHJhaGEgNCwgUMOtc25pY2vDoSA3NjA!5e0!3m2!1scs!2scz!4v1668676778032!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>

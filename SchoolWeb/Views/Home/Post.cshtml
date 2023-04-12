@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPi-egistrace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photo/logo_info.png">
+</head>
+<body class="registr">
+    <input type="checkbox" id="registr">
+    <input type="checkbox" name="" id="sender">
+    <div class="registrace">
+        <div class="registrace-first">
+            <div class="profil post-create">
+                <div class="post-title">
+                    <hr class="profil">
+                    <h2>Příspěvěk</h2>
+                </div>
+                <div class="post-info">
+                    <div class="post-img postone-img" id="postone-img">
+                        <input type="file" name="image_input" id="img-post" accept="image/*" style="display: none;">
+                        <label for="img-post"><div></div></label>
+                    </div>
+                    <div class="post-img" id="posttw-img">
+                        <input type="file" name="" id="img-posttw" accept="image/*" style="display: none;">
+                        <label for="img-posttw"><div></div></label>
+                    </div>
+                    <div class="post-img" id="postth-img">
+                        <input type="file" name="" id="img-postth" accept="image/*" style="display: none;">
+                        <label for="img-postth"><div></div></label>
+                    </div>
+                    <div class="post-img" id="postfo-img">
+                        <input type="file" name="" id="img-postfo" accept="image/*" style="display: none;">
+                        <label for="img-postfo"><div></div></label>
+                    </div>
+                    <div class="post-img" style="margin-right: 0;" id="postf-img">
+                        <input type="file" name="" id="img-postf" accept="image/*" style="display: none;">
+                        <label for="img-postf"><div></div></label>
+                    </div>
+                </div>
+                <div class="profil-button post-imgbut">
+                    <a href="login.html">Zrušit</a>
+                    <label for="registr">Náhled</label>
+                    <label for="sender">Vytvořit</label>
+                </div>
+            </div>
+        </div>
+        <div class="registrace-second">
+            <div class="nahled">
+                <div class="orig">
+                    <input type="radio" name="post" id="origone" checked>
+                    <label for="origone" class="post-orig" id="lorigone"></label>
+                </div>
+                <div class="orig">
+                    <input type="radio" name="post" id="origtwo">
+                    <label for="origtwo" class="post-orig" id="lorigtwo"></label>
+                </div>
+                <div class="orig">
+                    <input type="radio" name="post" id="origthree">
+                    <label for="origthree" class="post-orig" id="lorigthree"></label>
+                </div>
+                <div class="orig">
+                    <input type="radio" name="post" id="origfour">
+                    <label for="origfour" class="post-orig" id="lorigfour"></label>
+                </div>
+                <div class="orig">
+                    <input type="radio" name="post" id="origfive">
+                    <label for="origfive" class="post-orig" id="lorigfive"></label>
+                </div>
+                <div class="post-but">
+                    <label for="registr">Zpět</label>
+                    <label for="sender">Vytvořit</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const image_input = document.getElementById("img-post");
+        var uploaded_image = "";
+
+        image_input.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_image = reader.result;
+                document.getElementById("postone-img").style.backgroundImage = `url(${uploaded_image})`;
+                document.getElementById("lorigone").style.backgroundImage = `url(${uploaded_image})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+        
+        const image_inputtw = document.getElementById("img-posttw");
+        var uploaded_image = "";
+
+        image_inputtw.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_imagetw = reader.result;
+                document.getElementById("posttw-img").style.backgroundImage = `url(${uploaded_imagetw})`;
+                document.getElementById("lorigtwo").style.backgroundImage = `url(${uploaded_imagetw})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+        
+        const image_inputth = document.getElementById("img-postth");
+        var uploaded_image = "";
+
+        image_inputth.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_imageth = reader.result;
+                document.getElementById("postth-img").style.backgroundImage = `url(${uploaded_imageth})`;
+                document.getElementById("lorigthree").style.backgroundImage = `url(${uploaded_imageth})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        
+        
+        const image_inputfo = document.getElementById("img-postfo");
+        var uploaded_image = "";
+
+        image_inputfo.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_imagefo = reader.result;
+                document.getElementById("postfo-img").style.backgroundImage = `url(${uploaded_imagefo})`;
+                document.getElementById("lorigfour").style.backgroundImage = `url(${uploaded_imagefo})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        
+        
+        const image_inputf = document.getElementById("img-postf");
+        var uploaded_image = "";
+
+        image_inputf.addEventListener("change", function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_imagef = reader.result;
+                document.getElementById("postf-img").style.backgroundImage = `url(${uploaded_imagef})`;
+                document.getElementById("lorigfive").style.backgroundImage = `url(${uploaded_imagef})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+    </script>
+</body>
+</html>
