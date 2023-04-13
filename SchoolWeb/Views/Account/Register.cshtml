@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPi-egistrace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photo/logo_info.png">
+</head>
+<body class="registr">
+    <input type="checkbox" id="registr">
+    <input type="checkbox" name="" id="sender">
+    <div class="registrace">
+        <div class="email-send">
+            <div class="sender">
+                <img src="photo/sender.png" alt="">
+                <h2>Poslali jsme Vám email!</h2>
+                <p>Na email Vám přijde nová zpráva, kterou potvrďte! Potom už se jen 
+                    přihlaste.</p>
+                <a href="login.html">Zpět na stránky</a>
+            </div>
+        </div>
+        <div class="registrace-first">
+            <div class="reg-inf">
+                <h2>Registrace</h2>
+                <p>K vytvoření účtu vyplňte prosím formuláře! Po vyplnění informací 
+                    profilu Vám zašleme potvrzovací email.</p>
+                <div class="namai">
+                    <input type="email" name="" id="" placeholder="Email"> @*//Register Email Input*@
+                    <input type="password" name="" id="" placeholder="Nové heslo"> @*//Register Password Input*@
+                    <input type="password" name="" id="" placeholder="Znovu nové heslo"> @*//Register RePassword Input*@
+                </div>
+                <div class="reg-button">
+                    <a href="index.html">Zrušit</a>
+                    <label for="registr">Další</label>
+                </div>
+            </div>
+        </div>
+        <div class="registrace-second">
+            <div class="profil">
+                <div class="profil-title">
+                    <hr class="profil">
+                    <h2>PROFIL</h2>
+                </div>
+                <div class="profil-info">
+                    <div class="info-img" id="imgBox">
+                        <input type="file" name="" id="image" accept="image/*" style="display: none;" onchange="loadFile(event)">
+                        <label for="image"><div></div></label>
+                    </div>
+                    <div class="near-info">
+                        <div class="profil-class">
+                            <div class="profil-inf">
+                                <input type="text" name="" id="main" required>
+                                <label for="main">Křestní jméno</label>
+                            </div>
+                            <div class="profil-inf">
+                                <input type="text" name="" id="nick" required>
+                                <label for="nick">Příjmení</label>
+                            </div>
+                        </div>
+                        <div class="profil-class">
+                            <div class="profil-inf">
+                                <input type="tel" name="" id="tel" required>
+                                <label for="tel">Telefonní číslo</label>
+                            </div>
+                            <div class="profil-inf">
+                                <input type="text" name="" id="mail" required>
+                                <label for="mail">Email</label>
+                            </div>
+                        </div>
+                        <div class="profil-class">
+                            <div class="profil-inf">
+                                <input type="text" name="" id="ig" required>
+                                <label for="ig">Instagram</label>
+                            </div>
+                            <div class="profil-inf">
+                                <input type="text" name="" id="face" required>
+                                <label for="face">Facebook</label>
+                            </div>
+                        </div>
+                        <div class="profil-class">
+                            <div class="profil-inf">
+                                <input type="text" name="" id="class" required>
+                                <label for="class">Třída</label>
+                            </div>
+                            <div class="profil-inf">
+                                <input type="date" name="" id="date" required>
+                                <label for="date" class="date">Narození (den, měsíc, rok)</label>
+                            </div>
+                        </div>
+                        <div class="profil-button">
+                            <a href="index.html">Zrušit</a>
+                            <label for="registr">Zpět</label>
+                            <label for="sender">Vytvořit</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var imgBox = document.getElementById("imgBox")
+
+        var loadFile = function(event){
+            imgBox.style.backgroundImage = "url(" +URL.createObjectURL(event.target.files[0])+ ")"
+        }
+    </script>
+</body>
+</html>

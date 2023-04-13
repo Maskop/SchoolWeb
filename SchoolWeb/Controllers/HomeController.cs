@@ -18,10 +18,15 @@ namespace SchoolWeb.Controllers
             return View();
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
+        //public IActionResult Login()
+        //{
+        //    return View();
+        //}
+
+        //public IActionResult Registrace()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Content()
         {
