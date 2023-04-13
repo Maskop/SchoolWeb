@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="cz">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPi-egistrace</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="photo/logo_info.png">
-</head>
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Registration";
+}
+
 <body class="registr">
     <input type="checkbox" id="registr">
     <input type="checkbox" name="" id="sender">
@@ -27,9 +22,18 @@
                 <p>K vytvoření účtu vyplňte prosím formuláře! Po vyplnění informací 
                     profilu Vám zašleme potvrzovací email.</p>
                 <div class="namai">
-                    <input type="email" name="" id="" placeholder="Email"> @*//Register Email Input*@
-                    <input type="password" name="" id="" placeholder="Nové heslo"> @*//Register Password Input*@
-                    <input type="password" name="" id="" placeholder="Znovu nové heslo"> @*//Register RePassword Input*@
+                    <div class="form-group">
+                        <input asp-for="Email" class="form-control" placeholder="Email"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div> @*//Register Email Input*@
+                    <div class="form-group">
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Heslo" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div> @*//Register Password Input*@
+                    <div class="form-group">
+                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Znovu Heslo" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div> @*//Register RePassword Input*@
                 </div>
                 <div class="reg-button">
                     <a href="index.html">Zrušit</a>
